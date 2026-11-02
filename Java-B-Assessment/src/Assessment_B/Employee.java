@@ -118,12 +118,12 @@ public class Employee implements IEmployee{
 
     @Override
     public double calcGrossSalary(){
-        return calcGrossSalary() + TAX/100;
+        return basicSalary + calcHouseAllowance();
     }
 
     @Override
     public double calcTax(){
-        return calcGrossSalary() + TAX / 100;
+        return calcGrossSalary() * TAX / 100;
     }
 
     @Override
